@@ -1,0 +1,25 @@
+.{
+    .name = .wibo,
+    .fingerprint = 0x1a6cc27a7668021b,
+    .version = "1.2.0",
+    .zig_version = "0.17.1",
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        // wibo 1.2.0
+        .upstream = .{
+            .url = "git+https://github.com/decompals/wibo#c1a7d472bd49e5dbaf3fe9aec272461b2e12f68a",
+            .hash = "N-V-__8AABrLEABSo31vsk35e7moih1NK_shetMDXdExPI5Z",
+        },
+        // the commit wibo 1.2.0's CMakeLists.txt pins
+        .mimalloc = .{
+            .url = "git+https://github.com/microsoft/mimalloc#69c5c5c402bf0414ff4a366697ecbd5c7578dc02",
+            .hash = "N-V-__8AANjgTQBjEmOH6Yux5IyhhFQRwKn4LOW_oGk83Dzd",
+        },
+        .fetch = .{
+            .url = "git+https://github.com/marler8997/zig-fetch#78bc38ffa9920d15509dcd65ccae4b9323dc8776",
+            .hash = "fetch-0.0.0-QTf_ZxTNAACsqfMqcALzrq-aWRxxEVRW14m33sduqMUz",
+            .lazy = true,
+        },
+    },
+    .paths = .{ "build.zig", "build.zig.zon", "tools", "README.md" },
+}
